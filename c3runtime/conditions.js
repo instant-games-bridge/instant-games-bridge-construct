@@ -26,6 +26,9 @@
         IsGameDistribution() {
             return window.bridge.platform.id === 'game_distribution'
         },
+        IsVkPlay() {
+            return window.bridge.platform.id === 'vk_play'
+        },
         IsMock() {
             return window.bridge.platform.id === 'mock'
         },

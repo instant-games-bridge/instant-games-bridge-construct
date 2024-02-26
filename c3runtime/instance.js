@@ -7,12 +7,13 @@
             this.conditions = C3.Plugins.InstantGamesBridge.Cnds
             this.actions = C3.Plugins.InstantGamesBridge.Acts
 
-            let cdnUrl = 'https://cdn.jsdelivr.net/gh/instant-games-bridge/instant-games-bridge@1.11.0/dist/instant-games-bridge.js'
+            let cdnUrl = 'https://cdn.jsdelivr.net/gh/instant-games-bridge/instant-games-bridge@1.12.0/dist/instant-games-bridge.js'
             if (properties[1] !== '') {
                 cdnUrl = properties[1]
             }
 
             this.gameDistributionGameId = properties[3]
+            this.vkPlayGameId = properties[4]
 
             if (properties[0]) {
                 this._runtime.AddLoadPromise(this.loadSdk(cdnUrl))
@@ -22,8 +23,8 @@
                 this._runtime.AddLoadPromise(this.initializeSdk())
             }
 
-            if (properties[4]) {
-                this.showInterstitialOnInit = properties[4]
+            if (properties[5]) {
+                this.showInterstitialOnInit = properties[5]
             }
 
             this.storageData = null
@@ -65,6 +66,10 @@
 
                         if (this.gameDistributionGameId !== '') {
                             bridgeOptions.platforms['game_distribution'] = { gameId: this.gameDistributionGameId }
+                        }
+
+                        if (this.vkPlayGameId !== '') {
+                            bridgeOptions.platforms['vk_play'] = { gameId: this.vkPlayGameId }
                         }
 
                         window.bridge.initialize(bridgeOptions)

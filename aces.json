@@ -45,6 +45,10 @@
                 "scriptName": "IsGameDistribution"
             },
             {
+                "id": "is-vk-play",
+                "scriptName": "IsVkPlay"
+            },
+            {
                 "id": "is-mock",
                 "scriptName": "IsMock"
             }

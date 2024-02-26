@@ -25,6 +25,10 @@
                         "name": "GameDistribution Game ID",
                         "desc": "Game ID, which you can find from your control panel on GameDistribution.com."
                     },
+                    "vk-play-game-id": {
+                        "name": "VK Play Game ID",
+                        "desc": "Game ID, which you can find from your control panel on VKPlay.ru."
+                    },
                     "show-interstitial-on-init": {
                         "name": "Show Interstitial On Init",
                         "desc": "Automatically show interstitial when SDK is initialized. Supported only on Yandex and Game Distribution."
@@ -80,6 +84,11 @@
                         "list-name": "IsGameDistribution",
                         "display-text": "Is Game Distribution",
                         "description": "Is Game Distribution"
+                    },
+                    "is-vk-play": {
+                        "list-name": "IsVkPlay",
+                        "display-text": "Is VK Play",
+                        "description": "Is VK Play"
                     },
                     "is-mock": {
                         "list-name": "IsMock",
